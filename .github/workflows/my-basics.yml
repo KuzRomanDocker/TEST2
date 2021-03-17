@@ -27,7 +27,11 @@ jobs:
            echo "Application name: ${{ env.APPLICATION_NAME }}"
        - name: List current folder
          run: ls -la
-       
+       - name: Git clone my repo
+         uses: actions/checkout@v1
+       - name: List current folder
+         run: ls -la
+         
    my_deploy:
        runs-on: ubuntu-latest
        needs: [my_testing]
@@ -38,4 +42,10 @@ jobs:
          
        - name: Printing Deployment package
          run: echo "Deploy package name is ${{ env.DEPLOY_PACKAGE_NAME }}"
+         
+       - name: Lets test some pakages if they are here 1
+         run:  aws --version
+               
+       - name: Lets test some pakages f they are here 2
+         run:  zip
          
