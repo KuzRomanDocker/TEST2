@@ -11,14 +11,14 @@ on:
         - master
 jobs:
    my_testing:
-       runs-on: ubuntu_latest
+       runs-on: ubuntu-latest
        
        steps:
        - name: Print Hello Message
          run: echo "Hello World from Testing"
        
    my_deploy:
-       runs-on: ubuntu_latest
+       runs-on: ubuntu-latest
        
        steps:
        - name: Print Hello Message
