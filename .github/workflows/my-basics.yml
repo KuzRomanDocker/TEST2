@@ -14,7 +14,7 @@ on:
         - master
 jobs:
    my_testing:
-       runs-on: ubuntu-late
+       runs-on: ubuntu-latest
        
        steps:
        - name: Print Hello Message in Testing
